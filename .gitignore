@@ -2,6 +2,9 @@
 
 .idea
 
+/public/dist
+/public/plugins
+
 # dependencies
 /node_modules
 /.pnp
