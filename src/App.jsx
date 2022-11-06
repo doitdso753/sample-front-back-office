@@ -1,6 +1,3 @@
-// import 'admin-lte/dist/js/adminlte.min.js';
-// import 'admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js';
-
 import 'admin-lte/dist/css/alt/adminlte.light.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -11,9 +8,6 @@ import Header from "./components/layout/Header";
 import SideBar from "./components/layout/SideBar";
 import Footer from "./components/layout/Footer";
 import Content from "./components/layout/Content";
-
-// window.$ = window.jQuery = require('admin-lte/plugins/jquery/jquery.min');
-// window.$.DataTable = require();
 
 function App() {
     const dispatch = useDispatch();

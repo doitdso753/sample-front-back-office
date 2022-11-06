@@ -40,7 +40,7 @@ export const boardSlice = createSlice({
         error: null,
       },
     }),
-    getBoardListSuccess: (state, payload) => ({
+    getBoardListSuccess: (state, { payload }) => ({
       ...state,
       boardList: {
         data: payload,

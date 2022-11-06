@@ -1,5 +1,5 @@
 import {
-    takeLatest,
+    takeLatest, put,
 } from 'redux-saga/effects';
 import axios from 'axios';
 import { rootAction } from "../../slice/rootSlice";
@@ -22,8 +22,15 @@ export function* getBoardList({
     try {
         const url = '/board';
         const response = yield axios.get(url, payload);
-        console.log(response);
-    } catch (e) {
 
+        const {status, data} = response;
+
+        if (status !== 200 || data.code !== 'success') {
+            throw Error(data);
+        }
+
+        yield put(boardActions.getBoardListSuccess(data.data));
+    } catch (e) {
+        yield put(boardActions.getBoardListFail(e));
     }
 }
