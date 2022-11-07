@@ -58,9 +58,10 @@ function Board() {
                         <div className="col-12">
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">DataTable with default features</h3>
+                                    <h3 className="card-title">Board</h3>
                                 </div>
                                 <div className="card-body">
+                                    <Link to="create"><button type="button" className="btn btn-primary mb-2">Board Create</button></Link>
                                     <table id="example1" className="table table-bordered table-striped">
                                         <thead>
                                         <tr>
@@ -74,7 +75,7 @@ function Board() {
                                         {boardList?.data && (boardList?.data ?? []).map((item) => (
                                             <tr key={item.id}>
                                                 <td>{item.id}</td>
-                                                <td><Link to={item.id}>{item.title}</Link></td>
+                                                <td><Link to={`/board/${item.id}`}>{item.title}</Link></td>
                                                 <td>{item.content}</td>
                                                 <td>{item.created_at}</td>
                                             </tr>
